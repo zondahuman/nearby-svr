@@ -8,7 +8,8 @@ https://blog.csdn.net/xiaojimanman/article/details/50358506
 Geohash距离估算 附近的人的距离
 https://blog.csdn.net/qq_22929803/article/details/51039877
 
-
+geohash-java
+https://github.com/kungfoo/geohash-java
 
 
 
