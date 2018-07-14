@@ -12,5 +12,7 @@ geohash-java
 https://github.com/kungfoo/geohash-java
 
 
-
+springboot 启动报错 java.lang.IllegalStateException: Failed to introspect annotated methods on class org
+https://blog.csdn.net/qq_32198005/article/details/78435648
+https://stackoverflow.com/questions/37938289/spring-boot-java-lang-classnotfoundexception-javax-servlet-servletcontext-and
 
