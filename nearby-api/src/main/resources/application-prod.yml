@@ -3,7 +3,11 @@ server:
         port: 8333
 spring:
         application:
-                      name: cloud-ribbon-consumer
+                      name: nearby-service
 
 local:
         param: prod-sky
+
+
+
+        

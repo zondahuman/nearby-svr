@@ -3,7 +3,7 @@ server:
         port: 8222
 spring:
         application:
-                      name: cloud-ribbon-consumer
+                      name: nearby-service
 
 local:
         param: beta-sky
