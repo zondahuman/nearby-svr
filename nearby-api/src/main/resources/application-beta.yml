@@ -4,4 +4,6 @@ server:
 spring:
         application:
                       name: cloud-ribbon-consumer
-      
+
+local:
+        param: beta-sky
