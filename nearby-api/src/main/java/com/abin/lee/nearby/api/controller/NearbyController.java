@@ -23,7 +23,7 @@ public class NearbyController {
     @RequestMapping(value = "/add", method = {RequestMethod.GET, RequestMethod.POST})
     public String add(Integer param) {
         String localParam = env.getProperty("local.param");
-        log.info("---------param= " + param + "localParam= " + localParam);
+        log.info("---------param= " + param + "  , localParam= " + localParam);
         return localParam;
     }
 
