@@ -13,7 +13,8 @@ import java.util.Map;
  */
 public class NearbyEnvironmentTest {
     private static final String httpUrl = "http://localhost:9333/cloud-client/ribbon-client/add?param1=13&param2=33&token=zz";
-    private static final String httpCreateUrl = "http://localhost:9333/nearby/add";
+    private static final String httpCreateUrl = "http://localhost:9000/nearby/add";
+//    private static final String httpCreateUrl = "http://localhost:9333/nearby/add";
 
     public static void main(String[] args) throws IOException {
 
