@@ -1,0 +1,7 @@
+# port
+server:
+        port: 9222
+spring:
+        application:
+                      name: cloud-ribbon-consumer
+      

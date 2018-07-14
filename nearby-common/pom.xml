@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>nearby-common</artifactId>
+    <packaging>jar</packaging>
+
+
+
+
+
 
 
 </project>

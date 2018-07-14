@@ -1,0 +1,6 @@
+# port
+server:
+        port: 9000
+spring:
+        application:
+                      name: cloud-ribbon-consumer
