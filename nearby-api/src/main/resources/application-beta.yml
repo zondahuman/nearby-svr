@@ -1,6 +1,6 @@
 # port
 server:
-        port: 9222
+        port: 8222
 spring:
         application:
                       name: cloud-ribbon-consumer
