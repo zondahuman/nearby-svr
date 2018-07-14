@@ -39,11 +39,42 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring.boot.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>log4j-over-slf4j</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>${spring.boot.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--servlet依赖-->
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>javax.servlet-api</artifactId>-->
+            <!--<version>3.1.0</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>javax.servlet-api</artifactId>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+        <!---->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>8.0.36</version>
             <scope>provided</scope>
         </dependency>
 
@@ -105,21 +136,21 @@
 
         <plugins>
             <!--<plugin>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
-            <!--&lt;!&ndash;<version>1.5.2.RELEASE</version>&ndash;&gt;-->
-            <!--<version>${spring.boot.version}</version>-->
-            <!--<configuration>-->
-            <!--<mainClass>com.abin.lee.nearby.api.NearbyApplication</mainClass>&lt;!&ndash;springboot启动类目录&ndash;&gt;-->
-            <!--</configuration>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<goals>-->
-            <!--&lt;!&ndash;创建一个自动可执行的jar或war文件 &ndash;&gt;-->
-            <!--<goal>repackage</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--&lt;!&ndash;<version>1.5.2.RELEASE</version>&ndash;&gt;-->
+                <!--<version>${spring.boot.version}</version>-->
+                <!--<configuration>-->
+                    <!--<mainClass>com.abin.lee.nearby.api.NearbyApplication</mainClass>&lt;!&ndash;springboot启动类目录&ndash;&gt;-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--&lt;!&ndash;创建一个自动可执行的jar或war文件 &ndash;&gt;-->
+                            <!--<goal>repackage</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
             <!--</plugin>-->
 
             <plugin>
