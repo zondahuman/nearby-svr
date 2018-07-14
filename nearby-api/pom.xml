@@ -13,7 +13,6 @@
     <packaging>war</packaging>
 
 
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -42,11 +41,13 @@
             <version>${spring.boot.version}</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
     </dependencies>
-
-
 
 
     <profiles>
@@ -85,39 +86,52 @@
     </profiles>
 
 
-
     <build>
         <resources>
             <resource>
-                <!--配置文件路径  -->
-                <directory>src/resources</directory> <!--这里对应项目存放配置文件的目录-->
-                <!--开启filtering功能  -->
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
                 <filtering>true</filtering>
             </resource>
+
         </resources>
+
+        <filters>
+            <filter>src/main/resources/application-${activatedProperties}.yml</filter>
+        </filters>
+
         <plugins>
+            <!--<plugin>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--&lt;!&ndash;<version>1.5.2.RELEASE</version>&ndash;&gt;-->
+            <!--<version>${spring.boot.version}</version>-->
+            <!--<configuration>-->
+            <!--<mainClass>com.abin.lee.nearby.api.NearbyApplication</mainClass>&lt;!&ndash;springboot启动类目录&ndash;&gt;-->
+            <!--</configuration>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<goals>-->
+            <!--&lt;!&ndash;创建一个自动可执行的jar或war文件 &ndash;&gt;-->
+            <!--<goal>repackage</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--</plugin>-->
+
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--<version>1.5.2.RELEASE</version>-->
-                <version>${spring.boot.version}</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.abin.lee.nearby.api.NearbyApplication</mainClass><!--springboot启动类目录-->
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <!--创建一个自动可执行的jar或war文件 -->
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
+
+
         </plugins>
     </build>
-
-
-
 
 
 </project>
