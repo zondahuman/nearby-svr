@@ -55,22 +55,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <version>${spring.boot.version}</version>
+            <!-- 这里需要compile,如果是provided的话会一直报错-->
             <scope>compile</scope>
         </dependency>
 
-        <!--servlet依赖-->
-        <!--<dependency>-->
-            <!--<groupId>javax.servlet</groupId>-->
-            <!--<artifactId>javax.servlet-api</artifactId>-->
-            <!--<version>3.1.0</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>javax.servlet</groupId>-->
-            <!--<artifactId>javax.servlet-api</artifactId>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-        <!---->
+
+        <!-- tomcat-servlet-api -->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-servlet-api</artifactId>
