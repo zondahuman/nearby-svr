@@ -34,9 +34,9 @@ public class NearbyController {
     @RequestMapping(value = "/create", method = {RequestMethod.GET, RequestMethod.POST})
     public String create(Integer param) {
         List<String> caches = new ArrayList<String>();
-        for (int i = 0; i < 10000000; i++) {
+        for (int i = 0; i < 100000; i++) {
             StringBuffer buffer = new StringBuffer();
-            for (int j = 0; j <100 ; j++) {
+            for (int j = 0; j <3 ; j++) {
                 buffer.append("leeooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"+j);
             }
 
