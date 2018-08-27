@@ -10,7 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>nearby-api</artifactId>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
+    <!--<packaging>war</packaging>-->
 
 
     <dependencyManagement>
@@ -108,7 +109,7 @@
 
 
     <build>
-        <finalName>Nearby</finalName>
+        <finalName>nearby-svr</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -125,23 +126,18 @@
         </filters>
 
         <plugins>
-            <!--<plugin>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
-                <!--&lt;!&ndash;<version>1.5.2.RELEASE</version>&ndash;&gt;-->
-                <!--<version>${spring.boot.version}</version>-->
-                <!--<configuration>-->
-                    <!--<mainClass>com.abin.lee.nearby.api.NearbyApplication</mainClass>&lt;!&ndash;springboot启动类目录&ndash;&gt;-->
-                <!--</configuration>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<goals>-->
-                            <!--&lt;!&ndash;创建一个自动可执行的jar或war文件 &ndash;&gt;-->
-                            <!--<goal>repackage</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

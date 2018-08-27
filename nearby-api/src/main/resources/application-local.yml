@@ -3,7 +3,7 @@ server:
         port: 8444
 spring:
         application:
-                      name: nearby-service
+                      name: nearby-svr
 
 local:
         param: local-sky
